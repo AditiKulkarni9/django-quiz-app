@@ -1,0 +1,38 @@
+<!-- quiz/templates/view_questions.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="mx-auto" style="max-width: 900px;">
+    <h2 class="mb-4">All Questions</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Question</th>
+                <th>Option A</th>
+                <th>Option B</th>
+                <th>Option C</th>
+                <th>Option D</th>
+                <th>Correct Option</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question in questions %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ question.question_text }}</td>
+                <td>{{ question.option_a }}</td>
+                <td>{{ question.option_b }}</td>
+                <td>{{ question.option_c }}</td>
+                <td>{{ question.option_d }}</td>
+                <td>{{ question.correct_option }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7" class="text-center">No questions available.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

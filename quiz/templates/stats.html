@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mx-auto" style="max-width: 600px;">
+    <h2 class="mb-4">Your Statistics</h2>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="text-center">
+            <h4>Total answered</h4>
+            <p class="display-6">{{ total_answered }}</p>
+        </div>
+        <div class="text-center">
+            <h4>Correct</h4>
+            <p class="display-6 text-success">{{ correct_count }}</p>
+        </div>
+        <div class="text-center">
+            <h4>Incorrect</h4>
+            <p class="display-6 text-danger">{{ incorrect_count }}</p>
+        </div>
+    </div>
+
+    <h3>Answered Questions Detail:</h3>
+    {% if answered_questions %}
+    <ul class="list-group">
+        {% for q in answered_questions %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ q.question_text }}
+            <span class="badge bg-info text-dark">Correct: {{ q.correct_option }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>You haven’t answered any questions yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

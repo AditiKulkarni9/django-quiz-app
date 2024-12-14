@@ -1,0 +1,64 @@
+<!-- quiz/templates/add_question.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="card mx-auto" style="max-width: 700px;">
+    <div class="card-body">
+        <h2 class="card-title mb-4">Add New Question</h2>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_question_text" class="form-label">Question</label>
+                {{ form.question_text }}
+                {% if form.question_text.errors %}
+                    <div class="text-danger">{{ form.question_text.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_option_a" class="form-label">Option A</label>
+                {{ form.option_a }}
+                {% if form.option_a.errors %}
+                    <div class="text-danger">{{ form.option_a.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_option_b" class="form-label">Option B</label>
+                {{ form.option_b }}
+                {% if form.option_b.errors %}
+                    <div class="text-danger">{{ form.option_b.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_option_c" class="form-label">Option C</label>
+                {{ form.option_c }}
+                {% if form.option_c.errors %}
+                    <div class="text-danger">{{ form.option_c.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_option_d" class="form-label">Option D</label>
+                {{ form.option_d }}
+                {% if form.option_d.errors %}
+                    <div class="text-danger">{{ form.option_d.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_correct_option" class="form-label">Correct Option</label>
+                {{ form.correct_option }}
+                {% if form.correct_option.errors %}
+                    <div class="text-danger">{{ form.correct_option.errors }}</div>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn btn-primary">Add Question</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

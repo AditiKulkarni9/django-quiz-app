@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card mx-auto" style="max-width: 600px;">
+    <div class="card-body text-center">
+        <h2 class="mb-4">Result</h2>
+        <p>You answered: <strong>{{ user_answer }}</strong></p>
+        {% if is_correct %}
+        <div class="alert alert-success" role="alert">
+            Correct! Good job.
+        </div>
+        {% else %}
+        <div class="alert alert-danger" role="alert">
+            Incorrect! The correct answer is {{ question.correct_option }}.
+        </div>
+        {% endif %}
+        <a href="{% url 'get_question' %}" class="btn btn-primary btn-lg mt-3">Get Next Question</a>
+    </div>
+</div>
+{% endblock %}
