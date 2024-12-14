@@ -1,5 +1,6 @@
 # Django Quiz App
  Django-based quiz application that allows users to take quizzes, view statistics, and manage questions.
+ Please make sure to have django installed in your IDE
 
 ## Features
 
@@ -23,12 +24,10 @@
 4. **Activate the Virtual Environment**
    ```bash
    venv\Scripts\activate
-6. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
+
 8. **Apply Migrations**
    ```bash
-   cs quiz_project
+   cd quiz_project
    python manage.py makemigrations
    python manage.py migrate
 10. **Run the Development Server**
