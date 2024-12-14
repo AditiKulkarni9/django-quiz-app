@@ -28,7 +28,7 @@
 
 8. **Apply Migrations**
    ```bash
-   cd quiz_project
+ 
    python manage.py makemigrations
    python manage.py migrate
 10. **Run the Development Server**
