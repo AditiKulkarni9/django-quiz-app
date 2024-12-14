@@ -17,6 +17,7 @@
 
    ```bash
    git clone https://github.com/AditiKulkarni9/django-quiz-app.git
+   cd django-quiz-app
    cd quiz-app
 2. **create a virtual environment**
    ```bash
