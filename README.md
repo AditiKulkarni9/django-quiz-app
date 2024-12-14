@@ -37,5 +37,5 @@
 ## Screenshots
 
 ![Home Page](https://github.com/AditiKulkarni9/django-quiz-app/blob/master/images/Screenshot%20(104).png?raw=true)
-
+![Stats Page](https://github.com/AditiKulkarni9/django-quiz-app/blob/master/images/Screenshot%20(105).png?raw=true)
 
