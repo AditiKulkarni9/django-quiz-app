@@ -16,7 +16,7 @@
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/django-quiz-app.git
+   git clone https://github.com/AditiKulkarni9/django-quiz-app.git
    cd quiz-app
 2. **create a virtual environment**
    ```bash
