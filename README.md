@@ -34,3 +34,11 @@
     ```bash
     python manage.py runserver
 
+## Screenshots
+
+![Home Page](## Screenshots
+
+![Home Page](https://github.com/AditiKulkarni9/django-quiz-app/blob/master/images/Screenshot%20(104).png?raw=true)
+)
+
+
