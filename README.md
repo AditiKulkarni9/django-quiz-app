@@ -19,15 +19,19 @@ A simple Django-based quiz application that allows users to take quizzes, view s
    git clone https://github.com/yourusername/django-quiz-app.git
    cd django-quiz-app
 2. **create a virtual environment**
+   ```bash
    python -m venv venv
-3. **Activate the Virtual Environment**
+4. **Activate the Virtual Environment**
+   ```bash
    venv\Scripts\activate
-   source venv/bin/activate
-4. **Install Dependencies**
+6. **Install Dependencies**
+   ```bash
    pip install -r requirements.txt
-5. **Apply Migrations**
+8. **Apply Migrations**
+   ```bash
    python manage.py makemigrations
    python manage.py migrate
-6. **Run the Development Server**
+10. **Run the Development Server**
+    ```bash
    python manage.py runserver
 
