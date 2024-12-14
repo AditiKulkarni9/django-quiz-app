@@ -1,6 +1,5 @@
 # Django Quiz App
-
-A simple Django-based quiz application that allows users to take quizzes, view statistics, and manage questions.
+ Django-based quiz application that allows users to take quizzes, view statistics, and manage questions.
 
 ## Features
 
@@ -33,5 +32,5 @@ A simple Django-based quiz application that allows users to take quizzes, view s
    python manage.py migrate
 10. **Run the Development Server**
     ```bash
-   python manage.py runserver
+    python manage.py runserver
 
