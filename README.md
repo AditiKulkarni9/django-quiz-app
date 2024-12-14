@@ -28,6 +28,7 @@
    pip install -r requirements.txt
 8. **Apply Migrations**
    ```bash
+   cs quiz_project
    python manage.py makemigrations
    python manage.py migrate
 10. **Run the Development Server**
